@@ -1,0 +1,2 @@
+# ignore example files from language statistics
+example/* linguist-vendored
