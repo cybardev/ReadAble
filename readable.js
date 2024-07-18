@@ -23,7 +23,7 @@ class ReadAble {
     }
 
     enable() {
-        // Select elements with the class "each-word"
+        // select elements with the identifier class
         const elements = document.querySelectorAll(this.identifier);
 
         for (let i = 0; i < elements.length; i++) {
@@ -34,7 +34,7 @@ class ReadAble {
                     if (p1) {
                         return "<span class='rdbl'>" + p1 + "</span>" + (p2 || "");
                     } else {
-                        return match; // Preserve HTML tags
+                        return match; // preserve HTML tags
                     }
                 }
             );
