@@ -1,7 +1,5 @@
 // module start
 
-const $$ = (identifier) => document.querySelectorAll(identifier);
-
 const firstLetterStyle = `
     {
         font-weight: bold;
