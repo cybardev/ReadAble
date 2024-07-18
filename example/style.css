@@ -1,0 +1,7 @@
+@import url("https://unpkg.com/mvp.css");
+
+blockquote {
+    display: inline;
+    font-size: medium;
+    text-align: justify;
+}
