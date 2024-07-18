@@ -24,6 +24,7 @@ class ReadAble {
         // select elements with the identifier class
         const elements = document.querySelectorAll(this.identifier);
 
+        // wrap first letter of each word with <span> HTML tag and .rdbl class
         for (let i = 0; i < elements.length; i++) {
             let htmlContent = elements[i].innerHTML;
             const modifiedContent = htmlContent.replace(
