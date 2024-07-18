@@ -1,2 +1,3 @@
 # ReadAble
-JS Web Library to make text on your websites more readable
+
+A JavaScript library to make text on your websites quicker to read.
