@@ -2,7 +2,7 @@
 
 const firstLetterStyle = `
     {
-        font-weight: bold;
+        font-weight: 760;
     }
 `;
 
