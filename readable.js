@@ -1,6 +1,6 @@
 // module start
 
-const firstLetterStyle = `
+let firstLetterStyle = `
     {
         font-weight: 800;
     }
