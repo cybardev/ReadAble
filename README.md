@@ -2,6 +2,14 @@
 
 A JavaScript library to make text on your websites quicker to read.
 
+## Example
+
+Live website: <https://readable.cybar.dev>
+
+![screenshot](https://github.com/user-attachments/assets/9f538888-6984-44bf-826f-847d6819ccc3 "Screenshot of webpage that uses this library")
+
+Check the [`example/`](example/) directory for code.
+
 ## Usage
 
 ### CDN
@@ -33,11 +41,3 @@ firstLetterStyle = `
 Adjust the `font-weight` to control the first letters' level of "boldness".
 
 **PS**: `font-weight` must be > 400, as 400 is normal text, and anything below gets thinner. Maximum `font-weight` is 900.
-
-## Example
-
-Live website: <https://readable.cybar.dev>
-
-![screenshot](https://github.com/user-attachments/assets/9f538888-6984-44bf-826f-847d6819ccc3 "Screenshot of webpage that uses this library")
-
-Check the [`example/`](example/) directory for code.
