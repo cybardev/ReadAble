@@ -3,7 +3,7 @@
 blockquote {
     display: inline;
     font-size: medium;
-    text-align: justify;
+    text-align: start;
 }
 
 header {
