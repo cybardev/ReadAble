@@ -5,3 +5,16 @@ blockquote {
     font-size: medium;
     text-align: justify;
 }
+
+header {
+    padding-bottom: 0;
+}
+
+header > a#toggle {
+    font-size: large;
+}
+
+header > a#toggle:hover {
+    font-size: large;
+    cursor: pointer;
+}

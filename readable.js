@@ -2,7 +2,7 @@
 
 const firstLetterStyle = `
     {
-        font-weight: 760;
+        font-weight: 800;
     }
 `;
 
@@ -14,13 +14,6 @@ class ReadAble {
         }
         this.identifier = `.${identifier}`;
 
-        // add style
-        this.style = new CSSStyleSheet();
-        this.style.replaceSync(`${this.identifier} span.rdbl ${firstLetterStyle}`);
-        document.adoptedStyleSheets = [this.style];
-    }
-
-    enable() {
         // select elements with the identifier class
         const elements = document.querySelectorAll(this.identifier);
 
@@ -38,6 +31,36 @@ class ReadAble {
                 }
             );
             elements[i].innerHTML = modifiedContent;
+        }
+
+        // add stylesheet
+        this.style = new CSSStyleSheet();
+
+        // maintain state
+        this.state = false;
+    }
+
+    enable() {
+        // apply style to the first letter of each word
+        this.style.replaceSync(`${this.identifier} span.rdbl ${firstLetterStyle}`);
+        document.adoptedStyleSheets = [this.style];
+
+        this.state = true;
+    }
+
+    disable() {
+        // remove style
+        document.adoptedStyleSheets = [];
+
+        this.state = false;
+    }
+
+    toggle() {
+        if (this.state === undefined) return;
+        if (this.state) {
+            this.disable();
+        } else {
+            this.enable();
         }
     }
 }

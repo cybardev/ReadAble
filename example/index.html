@@ -8,12 +8,13 @@
         <script async src="../readable.js"></script>
         <script defer src="script.js"></script>
     </head>
-    <body>
+    <body onload="init()">
         <header>
             <h1>ReadAble</h1>
             <p class="readable">
                 A JavaScript library to make text on your websites quicker to read.
             </p>
+            <a id="toggle" onclick="toggle()">Toggle ReadAble</a>
         </header>
         <main>
             <h2>Sample Text</h2>
