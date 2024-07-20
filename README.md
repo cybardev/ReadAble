@@ -10,6 +10,6 @@ A JavaScript library to make text on your websites quicker to read.
 
 ## Example
 
-![image](https://github.com/user-attachments/assets/543060ac-b4a9-4f8d-8d49-aff0cb6654db)
+![screenshot](https://github.com/user-attachments/assets/9f538888-6984-44bf-826f-847d6819ccc3 "Screenshot of webpage that uses this library")
 
 Check the [`example/`](example/) directory for code.
