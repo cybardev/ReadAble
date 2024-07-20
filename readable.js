@@ -41,22 +41,23 @@ class ReadAble {
     }
 
     enable() {
+        if (this.state === undefined) return;
+        this.state = true;
+
         // apply style to the first letter of each word
         this.style.replaceSync(`${this.identifier} span.rdbl ${firstLetterStyle}`);
         document.adoptedStyleSheets = [this.style];
-
-        this.state = true;
     }
 
     disable() {
+        if (this.state === undefined) return;
+        this.state = false;
+
         // remove style
         document.adoptedStyleSheets = [];
-
-        this.state = false;
     }
 
     toggle() {
-        if (this.state === undefined) return;
         if (this.state) {
             this.disable();
         } else {
