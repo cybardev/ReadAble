@@ -41,3 +41,7 @@ firstLetterStyle = `
 Adjust the `font-weight` to control the first letters' level of "boldness".
 
 **PS**: `font-weight` must be > 400, as 400 is normal text, and anything below gets thinner. Maximum `font-weight` is 900.
+
+## Credits
+
+- Code to wrap first letter of inner text in `<span>`: <https://stackoverflow.com/a/77084508>
