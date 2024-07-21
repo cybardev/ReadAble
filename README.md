@@ -17,7 +17,7 @@ Check the [`example/`](example/) directory for code.
 Add this to your HTML before any other script tags:
 
 ```html
-<script async src="https://cdn.jsdelivr.net/gh/cybardev/ReadAble@latest/readable.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/cybardev/ReadAble@v1/readable.js"></script>
 ```
 
 ### Manual
