@@ -1,21 +1,21 @@
 // module start
 
-let firstLetterStyle = `
-    {
-        font-weight: 800;
-    }
-`;
+const defaultConfig = {
+    identifier: ".readable",
+    fontWeight: 800,
+    fontColor: "black",
+    fontSize: "1em",
+};
 
 class ReadAble {
-    constructor(identifier) {
-        // set identifier
-        if (identifier === undefined) {
-            identifier = "readable";
-        }
-        this.identifier = `.${identifier}`;
+    constructor(config) {
+        this.config = {
+            ...defaultConfig,
+            ...config,
+        };
 
         // select elements with the identifier class
-        const elements = document.querySelectorAll(this.identifier);
+        const elements = document.querySelectorAll(this.config.identifier);
 
         // wrap first letter of each word with <span> HTML tag and .rdbl class
         for (let i = 0; i < elements.length; i++) {
@@ -45,7 +45,13 @@ class ReadAble {
         this.state = true;
 
         // apply style to the first letter of each word
-        this.style.replaceSync(`${this.identifier} span.rdbl ${firstLetterStyle}`);
+        this.style.replaceSync(`
+            ${this.config.identifier} span.rdbl {
+                font-weight: ${this.config.fontWeight};
+                color: ${this.config.fontColor};
+                font-size: ${this.config.fontSize};
+            }
+        `);
         document.adoptedStyleSheets = [this.style];
     }
 
