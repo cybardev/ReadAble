@@ -17,7 +17,7 @@ Check the [`example/`](example/) directory for code.
 Add this to your HTML before any other script tags:
 
 ```html
-<script async src="https://cdn.jsdelivr.net/gh/cybardev/ReadAble@v1/readable.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/cybardev/ReadAble@v2/readable.js"></script>
 ```
 
 ### Manual
@@ -28,19 +28,22 @@ Add this to your HTML before any other script tags:
 
 ## Customization
 
-In your JS script file, add and edit this variable:
+In your JS script file, pass in a config object as parameter to the `ReadAble` constructor:
 
 ```js
-firstLetterStyle = `
-    {
-        font-weight: 800;
-    }
-`;
+const config = {
+    identifier: ".readable",
+    fontWeight: 800,
+    fontColor: "black",
+    fontSize: "1em",
+};
+
+let rdbl = new ReadAble(config);
 ```
 
-Adjust the `font-weight` to control the first letters' level of "boldness".
+Adjust the values to control the first letters' style.
 
-**PS**: `font-weight` must be > 400, as 400 is normal text, and anything below gets thinner. Maximum `font-weight` is 900.
+**PS**: `font*` values are CSS styles; `identifier` is a CSS selector. Check source code to see how they're used. Default values will be used if no parameter is given.
 
 ## Credits
 
