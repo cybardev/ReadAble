@@ -70,4 +70,27 @@ class ReadAble {
             this.enable();
         }
     }
+
+    setConfig(config) {
+        this.config = {
+            ...this.config,
+            ...config,
+        };
+    }
+
+    setIdentifier(identifier) {
+        this.config.identifier = identifier;
+    }
+
+    setFontWeight(fontWeight) {
+        this.config.fontWeight = fontWeight;
+    }
+
+    setFontColor(fontColor) {
+        this.config.fontColor = fontColor;
+    }
+
+    setFontSize(fontSize) {
+        this.config.fontSize = fontSize;
+    }
 }
