@@ -5,6 +5,7 @@ const defaultConfig = {
     fontWeight: 800,
     fontColor: "black",
     fontSize: "1em",
+    scaleAll: true,
 };
 
 class ReadAble {
@@ -52,6 +53,22 @@ class ReadAble {
                 font-size: ${this.config.fontSize};
             }
         `);
+        // scale word gaps with first letters
+        this.style.insertRule(
+            `${this.config.identifier} {
+                word-spacing: ${
+                    this.config.fontSize.slice(0, this.config.fontSize.length - 2) / 4
+                }em;
+            }`
+        );
+        // scale entire texts if enabled (enabled by default)
+        if (this.config.scaleAll) {
+            this.style.insertRule(
+                `${this.config.identifier} {
+                    font-size: ${this.config.fontSize} !important;
+                }`
+            );
+        }
         document.adoptedStyleSheets = [this.style];
     }
 
@@ -92,5 +109,9 @@ class ReadAble {
 
     setFontSize(fontSize) {
         this.config.fontSize = fontSize;
+    }
+
+    setScaleAll(scaleAll) {
+        this.config.scaleAll = scaleAll;
     }
 }

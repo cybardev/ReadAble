@@ -36,6 +36,7 @@ const config = {
     fontWeight: 800,
     fontColor: "black",
     fontSize: "1em",
+    scaleAll: true,
 };
 
 let rdbl = new ReadAble(config);
