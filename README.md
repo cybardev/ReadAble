@@ -4,7 +4,7 @@ A JavaScript library to make text on your websites quicker to read.
 
 ## Example
 
-Live website: <https://readable.cybar.dev>
+Live website: <https://cybar.dev/readable>
 
 ![screenshot](https://github.com/user-attachments/assets/9f538888-6984-44bf-826f-847d6819ccc3 "Screenshot of webpage that uses this library")
 
